@@ -1,5 +1,4 @@
 import './style.css';
-
 function Time()
  {
    let date = new Date(); 
@@ -17,15 +16,22 @@ function Time()
       hh = hh - 12;
       session = "PM";
     }
-
-    hh = (hh < 10) ? "0" + hh : hh;
-    mm = (mm < 10) ? "0" + mm : mm;
-    ss = (ss < 10) ? "0" + ss : ss;
-    
-    let time = hh + ":" + mm + ":" + ss + " " + session;
-
+   if(hh < 10) 
+      hh="0"+hh;
+   else
+      hh=hh;
+   if(mm < 10) 
+      mm="0"+mm;
+   else
+      mm=mm;
+   if(ss < 10) 
+      ss="0"+ss;
+   else
+      ss=ss;
+   
+   let time = hh + ":" + mm + ":" + ss + " " + session;
    document.getElementById("clock").innerText = time; 
-   let t = setTimeout(function(){ Time() });
+   let t = setTimeout(function(){ Time() } , 1000);
 }
 
 Time();
