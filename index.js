@@ -18,16 +18,10 @@ function Time()
     }
    if(hh < 10) 
       hh="0"+hh;
-   else
-      hh=hh;
    if(mm < 10) 
       mm="0"+mm;
-   else
-      mm=mm;
    if(ss < 10) 
       ss="0"+ss;
-   else
-      ss=ss;
    
    let time = hh + ":" + mm + ":" + ss + " " + session;
    document.getElementById("clock").innerText = time; 
