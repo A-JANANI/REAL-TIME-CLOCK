@@ -25,7 +25,7 @@ function Time()
    
    let time = hh + ":" + mm + ":" + ss + " " + session;
    document.getElementById("clock").innerText = time; 
-   let t = setTimeout(function(){ Time() } , 1000);
+   let t = setInterval(function(){ Time() } , 1000);
 }
 
 Time();
